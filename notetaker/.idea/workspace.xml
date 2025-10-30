@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="167e86e6-6e3b-47b8-87cd-fd3aee1fea37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/controller/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/controller/NotetakerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/dto/NoteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/dto/UpdateNoteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/dto/UserCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/dto/UserResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/repository/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/service/NotetakerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nick/notetaker/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="30goxJC0StKuzff3bjK9aLRNvHt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.NotetakerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.nick.notetaker.NotetakerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/15189/Desktop/Code/updated_coding/projects/notes_app/notetaker&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.com.nick.notetaker.NotetakerApplication">
+    <configuration name="NotetakerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nick.notetaker.notetaker.NotetakerApplication" />
+      <module name="notetaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.notetaker.notetaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.nick.notetaker.NotetakerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_HOST" value="localhost, DB_PORT=5432, DB_NAME=notetaker_db, DB_USER=postgres, DB_PASS=NotetakerApp1!" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.nick.notetaker.NotetakerApplication" />
+      <module name="notetaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.notetaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.com.nick.notetaker.NotetakerApplication" />
+      <item itemvalue="Application.NotetakerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.com.nick.notetaker.NotetakerApplication" />
+        <item itemvalue="Application.NotetakerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="167e86e6-6e3b-47b8-87cd-fd3aee1fea37" name="Changes" comment="" />
+      <created>1754058822444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754058822444</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/notetaker$com_nick_notetaker_NotetakerApplication.ic" NAME="com.nick.notetaker.NotetakerApplication Coverage Results" MODIFIED="1754946839673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.nick.notetaker.*</FILTER>
+    </SUITE>
+  </component>
+</project>
