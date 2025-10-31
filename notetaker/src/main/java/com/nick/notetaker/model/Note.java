@@ -16,10 +16,6 @@ public class Note {
     @Column(nullable = false)
     private String content;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User userFK;
-
 
     public Note(){}
 
@@ -41,7 +37,5 @@ public class Note {
     public void setContent(String content) {
         this.content = content;
     }
-
-    public void setUserFK(User userFK){this.userFK = userFK;}
 
 }

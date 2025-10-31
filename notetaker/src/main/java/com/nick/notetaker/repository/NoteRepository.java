@@ -8,8 +8,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface NoteRepository extends JpaRepository<Note, UUID> {
-    Optional<Note> findByIdAndUserFK_Id(UUID noteId, UUID userId);
-    List<Note> findAllByUserFK_Id(UUID userId);
 
 
 }

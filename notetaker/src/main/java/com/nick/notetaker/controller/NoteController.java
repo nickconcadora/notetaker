@@ -12,25 +12,25 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/users/notes")
+@RequestMapping("api/notes")
 public class NoteController {
 
     @Autowired
     private NoteService noteService;
 
-    @PostMapping("/{id}")
-    private ResponseEntity<Note> createNote(@PathVariable UUID id, @RequestBody Note note) {
-        return ResponseEntity.ok(noteService.createNote(id, note.getTitle(), note.getContent()));
+    @PostMapping
+    private ResponseEntity<Note> createNote(@RequestBody Note note) {
+        return ResponseEntity.ok(noteService.createNote(note.getTitle(), note.getContent()));
     }
 
-    @GetMapping("/{userId}/{noteId}")
-    private ResponseEntity<Note> viewNote(@PathVariable UUID userId, @PathVariable UUID noteId) {
-        return ResponseEntity.ok(noteService.viewNote(userId, noteId));
+    @GetMapping("/{noteId}")
+    private ResponseEntity<Note> viewNote(@PathVariable UUID noteId) {
+        return ResponseEntity.ok(noteService.viewNote(noteId));
     }
 
-    @GetMapping("/{userId}")
-    private ResponseEntity <List<Note>> viewAllNotes(@PathVariable UUID userId) {
-        return ResponseEntity.ok(noteService.viewAllNotes(userId));
+    @GetMapping("/viewAllNotes")
+    private ResponseEntity <List<Note>> viewAllNotes() {
+        return ResponseEntity.ok(noteService.viewAllNotes());
     }
 
 }
