@@ -27,7 +27,6 @@ public class NoteService {
     }
 
     public List<Note> viewAllNotes() {
-
         return noteRepository.findAll();
     }
 }

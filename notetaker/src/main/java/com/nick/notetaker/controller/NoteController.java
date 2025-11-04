@@ -28,7 +28,7 @@ public class NoteController {
         return ResponseEntity.ok(noteService.viewNote(noteId));
     }
 
-    @GetMapping("/viewAllNotes")
+    @GetMapping
     private ResponseEntity <List<Note>> viewAllNotes() {
         return ResponseEntity.ok(noteService.viewAllNotes());
     }

@@ -3,7 +3,3 @@ com\nick\notetaker\NotetakerApplication.class
 com\nick\notetaker\controller\NoteController.class
 com\nick\notetaker\service\NoteService.class
 com\nick\notetaker\repository\NoteRepository.class
-com\nick\notetaker\repository\UserRepository.class
-com\nick\notetaker\service\UserService.class
-com\nick\notetaker\model\User.class
-com\nick\notetaker\controller\UserController.class
