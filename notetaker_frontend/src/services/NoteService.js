@@ -12,3 +12,8 @@ export const viewAllNotes = async () => {
     const response = await axios.get(API_URL);
     return response.data;
 }
+
+export const deleteNote = async (id) => {
+    const response = await axios.delete(`${API_URL}/${id}`);
+    return response.status;
+}

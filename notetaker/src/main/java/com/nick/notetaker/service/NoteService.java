@@ -21,6 +21,10 @@ public class NoteService {
             return noteRepository.save(note);
     }
 
+    public void deleteNote(UUID noteId) {
+        noteRepository.deleteById(noteId);
+    }
+
     public Note viewNote(UUID noteId) {
         return noteRepository.findById(noteId)
                 .orElseThrow(() -> new RuntimeException("Note not found for this user"));

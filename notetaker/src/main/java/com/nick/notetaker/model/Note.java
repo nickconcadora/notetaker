@@ -30,6 +30,8 @@ public class Note {
     public String getContent() {
         return content;
     }
+
+    public UUID getId() { return id; }
     public void setTitle(String title) {
         this.title = title;
     }

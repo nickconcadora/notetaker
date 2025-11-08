@@ -1,7 +1,7 @@
 import React from "react";
 import "./NoteList.css";
 
-const NoteList = ({ notes }) => {
+const NoteList = ({ notes, onDelete, onClick }) => {
     return (
         <div className="note-list">
             <h3>Your Notes</h3>
@@ -13,6 +13,9 @@ const NoteList = ({ notes }) => {
                         <div key={note.id} className="note-item">
                             <h4>{note.title}</h4>
                             <p>{note.content}</p>
+                            <button onClick={() => onClick(note.id)}>Summarize</button>
+                            {note.summary && <p><strong>AI Summary:</strong> {note.summary}</p>}
+                            <button onClick={() => onDelete(note.id)}>Delete</button>
                         </div>
                     ))}
                 </div>

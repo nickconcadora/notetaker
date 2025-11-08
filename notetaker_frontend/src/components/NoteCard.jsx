@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import { createNote, viewAllNotes } from '../services/NoteService';
+import { useEffect, useState } from "react";
+import { createNote, viewAllNotes, deleteNote } from '../services/NoteService';
 import NoteList from "./NoteList";
 import './NoteCard.css';
 
@@ -9,40 +9,55 @@ const NoteCard = () => {
     const [content, setContent] = useState('');
     const [notes, setNotes] = useState([]);
 
+
     useEffect(() => {
         fetchNotes();
     }, []);
 
-    const fetchNotes = async () => {
-        try{
-            const data = await viewAllNotes();
-            setNotes(data);
-        }catch (error) {
-            console.error("Error fetching notes:", error);
-        }
 
+    const fetchNotes = async () => {
+
+        const data = await viewAllNotes();
+        console.log("Fetched notes:", data);
+        setNotes(data);
     }
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        if(!title && !content) {
+
+        if (!title && !content) {
             alert("Note cannot be empty");
             return;
         }
 
-        try {
-            const response = await createNote({title, content});
-            console.log("Note created:", response);
-            
-            setTitle('');
-            setContent('');
+        await createNote({ title, content });
 
-            await fetchNotes();
-        }catch (error) {
-            console.error("Error creating note", error);
-        }
+        setTitle('');
+        setContent('');
+
+        await fetchNotes();
     }
+
+    const handleDelete = async (id) => {
+        const status = await deleteNote(id);
+
+        if (status === 200 || status === 204) {
+            // remove from local state
+            const updatedNotes = notes.filter((note) => note.id !== id);
+            setNotes(updatedNotes);
+        }
+    };
+    const handleSummarize = async (noteId) => {
+        const response = await fetch(`http://localhost:8000/summarize/${noteId}`);
+        if (!response.ok) throw new Error("Error summarizing note");
+        const data = await response.json();
+
+        console.log("AI summary received:", data.summary);
+
+        setNotes(prev =>
+            prev.map(n => (n.id === noteId ? { ...n, summary: data.summary } : n))
+        );
+    };
 
     return (
         <div>
@@ -61,10 +76,10 @@ const NoteCard = () => {
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                 />
-                <button type ="submit" className = "note-button">Save Note</button>
-
+                <button type="submit" className="note-button">Save Note</button>
             </form>
-            <NoteList notes={notes} />
+
+            <NoteList notes={notes} onDelete={handleDelete} onClick={handleSummarize}/>
         </div>
     )
 }

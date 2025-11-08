@@ -33,4 +33,9 @@ public class NoteController {
         return ResponseEntity.ok(noteService.viewAllNotes());
     }
 
+    @DeleteMapping("/{noteId}")
+    private void deleteNote(@PathVariable UUID noteId) {
+        noteService.deleteNote(noteId);
+    }
+
 }
